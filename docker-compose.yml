@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  micro.api.service:
+    image: ${DOCKER_REGISTRY-}microapiservice
+    build:
+      context: .
+      dockerfile: Micro.API.Service/Dockerfile
+    
+  redis:
+      image: "redis:alpine"
